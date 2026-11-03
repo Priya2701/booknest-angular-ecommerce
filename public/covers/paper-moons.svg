@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900" role="img" aria-label="Paper Moons by Daniel Okoye">
+<rect width="600" height="900" fill="#1d3557"/>
+<svg x="0" y="0" width="600" height="620" viewBox="0 0 600 620">
+    <rect width="600" height="620" fill="#ecd9b8"/>
+    <circle cx="300" cy="300" r="210" fill="#e1c593"/>
+    <circle cx="150" cy="300" r="62" fill="#1d3557"/>
+    <circle cx="300" cy="300" r="62" fill="#1d3557"/>
+    <circle cx="318" cy="288" r="58" fill="#e1c593"/>
+    <circle cx="450" cy="300" r="62" fill="#1d3557"/>
+    <circle cx="414" cy="300" r="62" fill="#e1c593"/>
+    <path d="M60 420 Q300 330 540 420" fill="none" stroke="#a8441c" stroke-width="3" stroke-dasharray="3 10" stroke-linecap="round"/>
+    <circle cx="300" cy="150" r="16" fill="#a8441c"/>
+    <polygon points="90,540 150,500 210,540 150,580" fill="#f7efe0" opacity=".9"/>
+    <polygon points="390,540 450,500 510,540 450,580" fill="#f7efe0" opacity=".9"/></svg>
+<rect x="0" y="618" width="600" height="282" fill="#1d3557"/>
+<rect x="260" y="628" width="80" height="3" fill="#f4b942"/>
+<text x="300" y="704" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" fill="#f7efe0">Paper Moons</text>
+<text x="300" y="852" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" letter-spacing="5" fill="#f4b942">DANIEL OKOYE</text>
+<rect x="0" y="0" width="26" height="900" fill="#000" opacity=".16"/>
+<rect x="26" y="0" width="3" height="900" fill="#fff" opacity=".12"/>
+</svg>

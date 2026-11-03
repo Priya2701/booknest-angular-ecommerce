@@ -1,0 +1,30 @@
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <p class="footer__logo">BookNest</p>
+      <p>Thoughtfully chosen books for curious readers, delivered to your door.</p>
+    </div>
+
+    <nav aria-label="Shop by category">
+      <h2>Shop</h2>
+      <ul>
+        @for (category of categories; track category.id) {
+          <li>
+            <a routerLink="/books" [queryParams]="{ category: category.slug }">{{ category.name }}</a>
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <nav aria-label="Customer service">
+      <h2>Help</h2>
+      <ul>
+        <li><a routerLink="/cart">Your cart</a></li>
+        <li><a routerLink="/books">All books</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="footer__legal">
+    <div class="container">&copy; {{ year }} BookNest. All rights reserved.</div>
+  </div>
+</footer>

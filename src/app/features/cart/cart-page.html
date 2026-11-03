@@ -1,0 +1,14 @@
+<div class="container page">
+  <h1 #heading tabindex="-1">Shopping cart</h1>
+  <app-cart
+    [lines]="cart.lines()"
+    [itemCount]="cart.count()"
+    [subtotal]="cart.subtotal()"
+    [shipping]="cart.shipping()"
+    [total]="cart.total()"
+    [freeShippingThreshold]="cart.freeShippingThreshold"
+    (quantityChange)="onQuantityChange($event)"
+    (remove)="onRemove($event)"
+    (clear)="onClear()"
+  />
+</div>

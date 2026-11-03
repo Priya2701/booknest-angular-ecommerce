@@ -1,0 +1,77 @@
+@use '../../../../styles/mixins' as m;
+
+.footer {
+  margin-top: var(--space-5);
+  background: var(--color-primary);
+  color: rgb(251 245 233 / 80%);
+
+  @include m.up(md) {
+    margin-top: var(--space-6);
+  }
+
+  &__grid {
+    display: grid;
+    padding-block: var(--space-5);
+    // Mobile: brand on top, then Shop and Help side by side to avoid a very tall footer.
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-4);
+
+    @include m.up(md) {
+      padding-block: var(--space-6);
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: var(--space-5);
+    }
+  }
+
+  &__logo {
+    margin-bottom: var(--space-2);
+    color: var(--color-on-primary);
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  &__brand {
+    grid-column: 1 / -1;
+
+    @include m.up(md) {
+      grid-column: auto;
+    }
+
+    p:last-child {
+      max-width: 32ch;
+    }
+  }
+
+  h2 {
+    margin-bottom: var(--space-3);
+    color: var(--color-accent-light);
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  li a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--touch-target);
+    text-decoration: none;
+
+    @include m.hover-device {
+      &:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__legal {
+    border-top: 1px solid rgb(251 245 233 / 15%);
+    font-size: 0.875rem;
+
+    .container {
+      padding-block: var(--space-3);
+    }
+  }
+}

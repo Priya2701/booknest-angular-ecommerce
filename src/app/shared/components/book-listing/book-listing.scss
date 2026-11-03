@@ -1,0 +1,23 @@
+@use '../../../../styles/mixins' as m;
+
+// 2 columns on mobile, 4 from tablet up. Four divides the 10-book catalogue and the
+// 4-book home sections evenly, so tablet never ends on a lone card.
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+
+  @include m.up(md) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  @include m.up(lg) {
+    gap: var(--space-4);
+  }
+}
+
+.empty {
+  padding: var(--space-5) 0;
+  color: var(--color-muted);
+  text-align: center;
+}

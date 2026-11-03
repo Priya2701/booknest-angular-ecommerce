@@ -1,0 +1,83 @@
+@if (lines().length === 0) {
+  <div class="empty">
+    <p class="empty__title">Your cart is empty</p>
+    <p>Find something good to read and it will show up here.</p>
+    <a routerLink="/books" class="btn btn--primary">Browse books</a>
+  </div>
+} @else {
+  <div class="layout">
+    <ul class="lines" aria-label="Cart items">
+      @for (line of lines(); track line.book.id) {
+        <li class="line">
+          <div class="line__cover" [style.background-color]="line.book.coverColor">
+            @if (line.book.coverUrl; as url) {
+              <img [src]="url" [alt]="'Cover of ' + line.book.title" width="600" height="900" loading="lazy" />
+            }
+          </div>
+
+          <div class="line__info">
+            <span class="line__title">{{ line.book.title }}</span>
+            <span class="line__author">{{ line.book.author }}</span>
+            <span class="line__unit">{{ line.book.price | currency }} each</span>
+          </div>
+
+          <div class="line__qty">
+            <app-quantity-stepper
+              [value]="line.quantity"
+              [max]="line.maxQuantity"
+              [label]="line.book.title"
+              (valueChange)="quantityChange.emit({ book: line.book, quantity: $event })"
+            />
+            @if (line.quantity >= line.maxQuantity) {
+              <span class="line__max">Maximum available</span>
+            }
+          </div>
+
+          <strong class="line__total">{{ line.lineTotal | currency }}</strong>
+
+          <button
+            type="button"
+            class="link-btn line__remove"
+            [attr.aria-label]="'Remove ' + line.book.title + ' from cart'"
+            (click)="remove.emit(line.book)"
+          >
+            Remove
+          </button>
+        </li>
+      }
+    </ul>
+
+    <aside class="summary" aria-label="Order summary">
+      <h2>Order summary</h2>
+      <dl>
+        <div>
+          <dt>Items</dt>
+          <dd>{{ itemCount() }}</dd>
+        </div>
+        <div>
+          <dt>Subtotal</dt>
+          <dd>{{ subtotal() | currency }}</dd>
+        </div>
+        <div>
+          <dt>Shipping</dt>
+          <dd>{{ shipping() === 0 ? 'Free' : (shipping() | currency) }}</dd>
+        </div>
+        <div class="summary__total">
+          <dt>Total</dt>
+          <dd>{{ total() | currency }}</dd>
+        </div>
+      </dl>
+      @if (freeShippingThreshold(); as threshold) {
+        @if (shipping() > 0) {
+          <p class="summary__hint">
+            Add {{ threshold - subtotal() | currency }} more for free shipping.
+          </p>
+        } @else {
+          <p class="summary__hint summary__hint--ok">You've unlocked free shipping.</p>
+        }
+      }
+      <a routerLink="/books" class="btn btn--primary">Continue shopping</a>
+      <button type="button" class="link-btn" (click)="clear.emit()">Clear cart</button>
+    </aside>
+  </div>
+}

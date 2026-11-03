@@ -1,0 +1,119 @@
+@use '../../../../styles/mixins' as m;
+
+.promo {
+  background: var(--color-primary-dark);
+  color: var(--color-on-primary);
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+
+  .container {
+    padding-block: 0.4rem;
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgb(251 245 233 / 94%);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+
+  &__bar {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    min-height: 4.25rem;
+  }
+
+  &__nav {
+    display: none;
+    margin-right: auto;
+
+    @include m.up(md) {
+      display: block;
+    }
+  }
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--touch-target);
+  margin-right: auto;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+
+  @include m.up(md) {
+    margin-right: var(--space-4);
+  }
+}
+
+.cart {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-width: var(--touch-target);
+  min-height: var(--touch-target);
+  padding: 0 var(--space-2);
+  font-weight: 600;
+  text-decoration: none;
+
+  @include m.hover-device {
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+
+  &__label {
+    display: none;
+
+    @include m.up(sm) {
+      display: inline;
+    }
+  }
+
+  &__badge {
+    min-width: 1.4rem;
+    padding: 0 0.4rem;
+    border-radius: 999px;
+    background: var(--color-accent);
+    color: #fff;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    line-height: 1.4rem;
+    text-align: center;
+  }
+}
+
+.menu-toggle {
+  min-height: var(--touch-target);
+  padding: 0 var(--space-3);
+  border: 1.5px solid var(--color-primary);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--color-primary);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+
+  @include m.up(md) {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  padding-bottom: var(--space-3);
+
+  @include m.up(md) {
+    display: none;
+  }
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900" role="img" aria-label="The Forgotten Road by Samuel Ortiz">
+<rect width="600" height="900" fill="#3a4a1f"/>
+<svg x="0" y="0" width="600" height="620" viewBox="0 0 600 620">
+    <defs><linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1c27d"/><stop offset="1" stop-color="#e9a15a"/></linearGradient></defs>
+    <rect width="600" height="620" fill="url(#dusk)"/>
+    <circle cx="300" cy="250" r="78" fill="#fff1c9"/>
+    <polygon points="0,320 120,260 260,330 380,250 520,320 600,280 600,620 0,620" fill="#6b7a3a"/>
+    <polygon points="0,400 140,340 280,410 420,350 600,420 600,620 0,620" fill="#4a5a2a"/>
+    <path d="M190 620 C430 540 170 470 285 392 C330 360 312 338 302 330 L316 330 C330 342 356 366 334 396 C240 480 500 540 440 620Z" fill="#efe1bd"/></svg>
+<rect x="0" y="618" width="600" height="282" fill="#3a4a1f"/>
+<rect x="260" y="628" width="80" height="3" fill="#f1c27d"/>
+<text x="300" y="674" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" fill="#f6efd8">The Forgotten</text><text x="300" y="734" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" fill="#f6efd8">Road</text>
+<text x="300" y="852" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" letter-spacing="5" fill="#f1c27d">SAMUEL ORTIZ</text>
+<rect x="0" y="0" width="26" height="900" fill="#000" opacity=".16"/>
+<rect x="26" y="0" width="3" height="900" fill="#fff" opacity=".12"/>
+</svg>

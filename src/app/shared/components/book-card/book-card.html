@@ -1,0 +1,49 @@
+<article class="card">
+  <div class="cover" [style.background-color]="book().coverColor">
+    @if (book().coverUrl; as url) {
+      <img
+        [src]="url"
+        [alt]="'Cover of ' + book().title + ' by ' + book().author"
+        width="600"
+        height="900"
+        loading="lazy"
+        decoding="async"
+      />
+    } @else {
+      <span class="cover__title" aria-hidden="true">{{ book().title }}</span>
+    }
+    @if (discountPercent() > 0) {
+      <span class="badge badge--sale">-{{ discountPercent() }}%</span>
+    } @else if (book().isNew) {
+      <span class="badge badge--new">New</span>
+    }
+  </div>
+
+  <div class="body">
+    <h3 class="title">{{ book().title }}</h3>
+    <p class="author">{{ book().author }}</p>
+    <app-rating-stars [rating]="book().rating" [reviewCount]="book().reviewCount" />
+
+    <div class="buy">
+      <p class="price">
+        <strong class="price__now">{{ book().price | currency }}</strong>
+        @if (discountPercent() > 0) {
+          <s class="price__old">{{ book().originalPrice | currency }}</s>
+        }
+      </p>
+      @if (lowStock()) {
+        <p class="stock">Only {{ book().stock }} left</p>
+      }
+
+      <button
+        type="button"
+        class="btn btn--primary"
+        [disabled]="!inStock()"
+        [attr.aria-label]="(inStock() ? 'Add ' : 'Unavailable: ') + book().title + (inStock() ? ' to cart' : '')"
+        (click)="addToCart.emit(book())"
+      >
+        {{ inStock() ? 'Add to Cart' : 'Out of stock' }}
+      </button>
+    </div>
+  </div>
+</article>

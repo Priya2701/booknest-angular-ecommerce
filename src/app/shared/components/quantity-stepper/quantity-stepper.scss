@@ -1,0 +1,39 @@
+@use '../../../../styles/mixins' as m;
+
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+
+  &__btn {
+    width: var(--touch-target);
+    height: var(--touch-target);
+    border: 0;
+    background: transparent;
+    color: var(--color-primary);
+    font: inherit;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    @include m.hover-device {
+      &:hover:not(:disabled) {
+        background: var(--color-bg-alt);
+      }
+    }
+
+    &:disabled {
+      color: var(--color-muted);
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+
+  &__value {
+    min-width: 2.25rem;
+    font-weight: 700;
+    text-align: center;
+  }
+}

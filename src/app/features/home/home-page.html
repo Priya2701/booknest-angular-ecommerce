@@ -1,0 +1,36 @@
+<app-hero-banner
+  eyebrow="Independent. Curated. Delivered."
+  heading="Find your next favourite story"
+  subheading="Fiction, mystery, science, history and more, hand-picked and delivered to your door."
+  ctaLabel="Shop all books"
+  ctaLink="/books"
+  [covers]="heroCovers()"
+>
+  <app-search-bar (search)="onSearch($event)" />
+</app-hero-banner>
+
+<div class="container sections">
+  <section>
+    <app-section-heading
+      heading="Browse by category"
+      subheading="Find something for every kind of reader."
+    />
+    <app-category-section [categories]="categories()" [counts]="categoryCounts()" />
+  </section>
+
+  <app-book-listing
+    heading="Featured books"
+    subheading="Our editors' picks this season."
+    linkLabel="View all"
+    [books]="featured()"
+    (addToCart)="addToCart($event)"
+  />
+
+  <app-book-listing
+    heading="New arrivals"
+    subheading="Fresh on the shelves."
+    linkLabel="Browse all books"
+    [books]="newArrivals()"
+    (addToCart)="addToCart($event)"
+  />
+</div>

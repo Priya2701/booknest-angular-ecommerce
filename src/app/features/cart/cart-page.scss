@@ -1,0 +1,11 @@
+// Focus target after Remove/Clear; it is not interactive, so no focus ring is needed.
+h1[tabindex='-1']:focus {
+  outline: none;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+  padding-block: var(--space-5);
+}

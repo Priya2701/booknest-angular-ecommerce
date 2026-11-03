@@ -1,0 +1,34 @@
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      @if (eyebrow(); as text) {
+        <p class="hero__eyebrow">{{ text }}</p>
+      }
+      <h1 id="hero-heading">{{ heading() }}</h1>
+      @if (subheading(); as text) {
+        <p class="hero__sub">{{ text }}</p>
+      }
+
+      <div class="hero__slot"><ng-content /></div>
+
+      @if (ctaLabel(); as label) {
+        <a class="btn btn--accent" [routerLink]="ctaLink()">{{ label }}</a>
+      }
+    </div>
+
+    @if (covers().length > 0) {
+      <div class="hero__covers" aria-hidden="true">
+        @for (cover of covers().slice(0, 3); track cover.url; let i = $index) {
+          <img
+            class="hero__cover hero__cover--{{ i + 1 }}"
+            [src]="cover.url"
+            alt=""
+            width="600"
+            height="900"
+            fetchpriority="high"
+          />
+        }
+      </div>
+    }
+  </div>
+</section>

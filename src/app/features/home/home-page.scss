@@ -1,0 +1,13 @@
+@use '../../../styles/mixins' as m;
+
+.sections {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+  padding-block: var(--space-5);
+
+  @include m.up(md) {
+    gap: var(--space-6);
+    padding-block: var(--space-6);
+  }
+}

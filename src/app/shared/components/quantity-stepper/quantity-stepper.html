@@ -1,0 +1,21 @@
+<div class="stepper" role="group" [attr.aria-label]="'Quantity for ' + label()">
+  <button
+    type="button"
+    class="stepper__btn"
+    [disabled]="value() <= min()"
+    [attr.aria-label]="'Decrease quantity of ' + label()"
+    (click)="valueChange.emit(value() - 1)"
+  >
+    <span aria-hidden="true">&minus;</span>
+  </button>
+  <output class="stepper__value" aria-live="polite">{{ value() }}</output>
+  <button
+    type="button"
+    class="stepper__btn"
+    [disabled]="value() >= max()"
+    [attr.aria-label]="'Increase quantity of ' + label()"
+    (click)="valueChange.emit(value() + 1)"
+  >
+    <span aria-hidden="true">+</span>
+  </button>
+</div>

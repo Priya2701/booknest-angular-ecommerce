@@ -1,0 +1,141 @@
+@use '../../../../styles/mixins' as m;
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  @include m.hover-device {
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+  }
+}
+
+.cover {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    padding: var(--space-3);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+.badge {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: var(--shadow-sm);
+
+  &--sale {
+    background: var(--color-sale);
+    color: #fff;
+  }
+
+  &--new {
+    background: var(--color-accent-light);
+    color: var(--color-primary);
+  }
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: 0.75rem;
+  min-width: 0;
+
+  @include m.up(sm) {
+    padding: var(--space-3);
+  }
+}
+
+.title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  min-height: 2.5em;
+  font-size: 1rem;
+  line-height: 1.25;
+
+  @include m.up(lg) {
+    font-size: 1.05rem;
+  }
+}
+
+.author {
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}
+
+.buy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: auto;
+  padding-top: var(--space-3);
+
+  // Narrow cards (2-up mobile, 4-up tablet are ~160px wide): keep the label on one line.
+  .btn {
+    padding-inline: var(--space-2);
+    white-space: nowrap;
+  }
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+
+  &__now {
+    font-size: 1.25rem;
+  }
+
+  &__old {
+    color: var(--color-muted);
+    font-size: 0.875rem;
+  }
+}
+
+.stock {
+  color: var(--color-sale);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}

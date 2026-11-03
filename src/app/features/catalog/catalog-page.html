@@ -1,0 +1,24 @@
+<div class="container catalog">
+  <h1 class="catalog__title">Shop books</h1>
+  <app-search-bar [value]="query()" (search)="onSearch($event)" />
+
+  <section>
+    <app-section-heading heading="Categories" />
+    <app-category-section [categories]="categories()" [activeSlug]="activeSlug()" />
+  </section>
+
+  <div>
+    <div class="results-bar">
+      <p class="results-bar__count" role="status">{{ resultSummary() }}</p>
+      @if (isFiltered()) {
+        <a class="results-bar__clear" routerLink="/books">Clear filters</a>
+      }
+    </div>
+    <app-book-listing
+      [heading]="heading()"
+      [books]="books()"
+      emptyMessage="No books match your search. Try a different title, author or category."
+      (addToCart)="addToCart($event)"
+    />
+  </div>
+</div>

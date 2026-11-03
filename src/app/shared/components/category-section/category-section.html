@@ -1,0 +1,21 @@
+<ul class="grid">
+  @for (category of categories(); track category.id) {
+    <li>
+      <a
+        class="tile"
+        [routerLink]="['/books']"
+        [queryParams]="{ category: category.slug }"
+        queryParamsHandling="merge"
+        [style.--accent]="category.accentColor"
+        [attr.aria-current]="category.slug === activeSlug() ? 'true' : null"
+      >
+        <span class="tile__mark" aria-hidden="true">{{ category.name.charAt(0) }}</span>
+        <span class="tile__name">{{ category.name }}</span>
+        <span class="tile__desc">{{ category.description }}</span>
+        @if (counts()[category.id]; as count) {
+          <span class="tile__count">{{ count }} {{ count === 1 ? 'book' : 'books' }}</span>
+        }
+      </a>
+    </li>
+  }
+</ul>

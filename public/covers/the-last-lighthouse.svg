@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900" role="img" aria-label="The Last Lighthouse by Elena Marsh">
+<rect width="600" height="900" fill="#14284b"/>
+<svg x="0" y="0" width="600" height="620" viewBox="0 0 600 620">
+    <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14284b"/><stop offset="1" stop-color="#3b6a9c"/></linearGradient></defs>
+    <rect width="600" height="620" fill="url(#sky)"/>
+    <circle cx="158" cy="195" r="2.5" fill="#fff" opacity="0.87"/><circle cx="237" cy="289" r="2.1" fill="#fff" opacity="0.63"/><circle cx="48" cy="256" r="1.1" fill="#fff" opacity="0.88"/><circle cx="324" cy="252" r="2.2" fill="#fff" opacity="0.95"/><circle cx="120" cy="137" r="1.4" fill="#fff" opacity="0.58"/><circle cx="353" cy="99" r="1.6" fill="#fff" opacity="0.68"/><circle cx="227" cy="207" r="2.4" fill="#fff" opacity="0.95"/><circle cx="507" cy="326" r="1.0" fill="#fff" opacity="0.69"/><circle cx="171" cy="89" r="1.2" fill="#fff" opacity="0.64"/><circle cx="127" cy="222" r="2.1" fill="#fff" opacity="0.40"/><circle cx="258" cy="256" r="1.3" fill="#fff" opacity="0.69"/><circle cx="513" cy="79" r="1.4" fill="#fff" opacity="0.79"/><circle cx="131" cy="204" r="2.2" fill="#fff" opacity="0.84"/><circle cx="58" cy="268" r="1.6" fill="#fff" opacity="0.91"/><circle cx="200" cy="83" r="2.7" fill="#fff" opacity="0.65"/><circle cx="86" cy="188" r="1.1" fill="#fff" opacity="0.95"/><circle cx="269" cy="105" r="1.7" fill="#fff" opacity="0.69"/><circle cx="324" cy="74" r="2.4" fill="#fff" opacity="0.65"/><circle cx="233" cy="119" r="1.3" fill="#fff" opacity="0.77"/><circle cx="217" cy="287" r="2.6" fill="#fff" opacity="0.64"/><circle cx="117" cy="251" r="2.4" fill="#fff" opacity="0.59"/><circle cx="139" cy="164" r="1.7" fill="#fff" opacity="0.89"/><circle cx="565" cy="218" r="0.9" fill="#fff" opacity="0.42"/><circle cx="342" cy="37" r="1.7" fill="#fff" opacity="0.95"/><circle cx="528" cy="307" r="1.1" fill="#fff" opacity="0.67"/><circle cx="351" cy="125" r="2.4" fill="#fff" opacity="0.89"/><circle cx="243" cy="124" r="2.7" fill="#fff" opacity="0.82"/><circle cx="403" cy="192" r="2.0" fill="#fff" opacity="0.41"/><circle cx="339" cy="212" r="1.5" fill="#fff" opacity="0.87"/><circle cx="104" cy="273" r="1.6" fill="#fff" opacity="0.42"/><circle cx="297" cy="238" r="1.9" fill="#fff" opacity="0.93"/><circle cx="205" cy="72" r="1.5" fill="#fff" opacity="0.45"/><circle cx="49" cy="49" r="2.7" fill="#fff" opacity="0.94"/><circle cx="514" cy="322" r="1.0" fill="#fff" opacity="0.93"/><circle cx="397" cy="293" r="2.7" fill="#fff" opacity="0.41"/><circle cx="394" cy="126" r="1.5" fill="#fff" opacity="0.63"/><circle cx="93" cy="213" r="1.8" fill="#fff" opacity="0.51"/><circle cx="248" cy="152" r="2.0" fill="#fff" opacity="0.83"/><circle cx="371" cy="113" r="2.4" fill="#fff" opacity="0.92"/><circle cx="198" cy="308" r="1.1" fill="#fff" opacity="0.46"/>
+    <polygon points="300,262 600,170 600,330" fill="#ffe7a0" opacity=".28"/>
+    <polygon points="300,262 0,170 0,330" fill="#ffe7a0" opacity=".18"/>
+    <polygon points="262,560 338,560 322,285 278,285" fill="#f7f1e6"/>
+    <polygon points="268,500 332,500 328,455 272,455" fill="#b3261e"/>
+    <polygon points="276,410 324,410 321,365 279,365" fill="#b3261e"/>
+    <polygon points="281,335 319,335 322,300 278,300" fill="#b3261e"/>
+    <rect x="272" y="268" width="56" height="20" fill="#2b2118"/>
+    <rect x="280" y="236" width="40" height="34" fill="#ffd36b"/>
+    <polygon points="272,238 328,238 300,206" fill="#b3261e"/>
+    <path d="M0 540 Q75 505 150 540 T300 540 T450 540 T600 540 V620 H0Z" fill="#102a43"/>
+    <path d="M0 575 Q75 545 150 575 T300 575 T450 575 T600 575 V620 H0Z" fill="#0b1d33"/></svg>
+<rect x="0" y="618" width="600" height="282" fill="#14284b"/>
+<rect x="260" y="628" width="80" height="3" fill="#ffd36b"/>
+<text x="300" y="674" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" fill="#f7f1e6">The Last</text><text x="300" y="734" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" fill="#f7f1e6">Lighthouse</text>
+<text x="300" y="852" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" letter-spacing="5" fill="#ffd36b">ELENA MARSH</text>
+<rect x="0" y="0" width="26" height="900" fill="#000" opacity=".16"/>
+<rect x="26" y="0" width="3" height="900" fill="#fff" opacity=".12"/>
+</svg>

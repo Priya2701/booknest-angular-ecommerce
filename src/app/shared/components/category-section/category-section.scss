@@ -1,0 +1,110 @@
+@use '../../../../styles/mixins' as m;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+
+  @include m.up(md) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @include m.up(lg) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: var(--space-4);
+  }
+
+  // Avoid a lone tile in the last row of the 2-column mobile layout.
+  @media (max-width: 767.98px) {
+    li:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  // Tablet (768-1023px): 3 tiles per row on a 6-column track. An incomplete last row
+  // is stretched to fill the width instead of leaving an empty cell.
+  @media (min-width: 768px) and (max-width: 1023.98px) {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+
+    li {
+      grid-column: span 2;
+    }
+
+    li:last-child:nth-child(3n + 1) {
+      grid-column: span 6;
+    }
+
+    li:nth-last-child(2):nth-child(3n + 1),
+    li:last-child:nth-child(3n + 2):not(:nth-child(3n + 1)) {
+      grid-column: span 3;
+    }
+  }
+}
+
+.tile {
+  --accent: var(--color-primary);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
+  height: 100%;
+  padding: var(--space-4) var(--space-3) var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+
+  &[aria-current='true'] {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-md);
+  }
+
+  @include m.hover-device {
+    &:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md);
+    }
+  }
+
+  &__mark {
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-bottom: var(--space-2);
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  &__name {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  &__desc {
+    color: var(--color-muted);
+    font-size: 0.875rem;
+    line-height: 1.45;
+  }
+
+  &__count {
+    margin-top: auto;
+    padding-top: var(--space-2);
+    color: var(--accent);
+    font-size: 0.8125rem;
+    font-weight: 700;
+  }
+}

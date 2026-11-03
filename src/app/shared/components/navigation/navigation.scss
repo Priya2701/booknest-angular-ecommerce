@@ -1,0 +1,37 @@
+@use '../../../../styles/mixins' as m;
+
+// Tablet keeps the tighter gap so logo, links and cart never crowd each other at 768px.
+ul {
+  display: flex;
+  gap: var(--space-4);
+}
+
+:host(.vertical) ul {
+  flex-direction: column;
+  gap: 0;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  color: var(--color-text);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+
+  @include m.hover-device {
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &.active {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+  }
+}
+
+:host(.vertical) a {
+  border-bottom: 1px solid var(--color-border);
+}

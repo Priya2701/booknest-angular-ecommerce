@@ -1,0 +1,10 @@
+<span class="rating" role="img" [attr.aria-label]="label()">
+  <span class="stars" aria-hidden="true">
+    <span class="stars__base">★★★★★</span>
+    <span class="stars__fill" [style.width.%]="fillPercent()">★★★★★</span>
+  </span>
+  <span class="value" aria-hidden="true">{{ rating().toFixed(1) }}</span>
+  @if (reviewCount() !== undefined) {
+    <span class="count" aria-hidden="true">({{ reviewCount() }})</span>
+  }
+</span>

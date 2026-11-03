@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900" role="img" aria-label="The Tiny Explorer&#39;s Atlas by Lila Hart">
+<rect width="600" height="900" fill="#17594a"/>
+<svg x="0" y="0" width="600" height="620" viewBox="0 0 600 620">
+    <rect width="600" height="620" fill="#17594a"/>
+    <circle cx="300" cy="300" r="190" fill="#1f7a66"/>
+    <g fill="#f4e4b8"><path d="M200 230 C230 190 290 200 300 240 C310 280 260 300 240 340 C215 330 180 280 200 230Z"/><path d="M340 190 C390 170 440 200 430 250 C420 290 380 280 360 320 C335 300 320 220 340 190Z"/><path d="M330 360 C370 340 410 370 395 420 C380 450 340 440 330 400Z"/></g>
+    <g fill="none" stroke="#f4e4b8" stroke-opacity=".55" stroke-width="2">
+      <ellipse cx="300" cy="300" rx="190" ry="70"/><ellipse cx="300" cy="300" rx="190" ry="140"/>
+      <ellipse cx="300" cy="300" rx="70" ry="190"/><ellipse cx="300" cy="300" rx="140" ry="190"/>
+      <line x1="110" y1="300" x2="490" y2="300"/><line x1="300" y1="110" x2="300" y2="490"/>
+      <circle cx="300" cy="300" r="190"/>
+    </g>
+    <g transform="translate(470 500)"><circle r="46" fill="#f4e4b8"/><polygon points="0,-36 9,0 0,36 -9,0" fill="#b3261e"/><polygon points="-36,0 0,-9 36,0 0,9" fill="#17594a"/></g></svg>
+<rect x="0" y="618" width="600" height="282" fill="#17594a"/>
+<rect x="260" y="628" width="80" height="3" fill="#f4e4b8"/>
+<text x="300" y="630" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" fill="#fbf3dc">The Tiny</text><text x="300" y="690" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" fill="#fbf3dc">Explorer&#39;s</text><text x="300" y="750" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" fill="#fbf3dc">Atlas</text>
+<text x="300" y="852" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" letter-spacing="5" fill="#f4e4b8">LILA HART</text>
+<rect x="0" y="0" width="26" height="900" fill="#000" opacity=".16"/>
+<rect x="26" y="0" width="3" height="900" fill="#fff" opacity=".12"/>
+</svg>

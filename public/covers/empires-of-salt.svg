@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900" role="img" aria-label="Empires of Salt by Clara Dubois">
+<rect width="600" height="900" fill="#1d3557"/>
+<svg x="0" y="0" width="600" height="620" viewBox="0 0 600 620">
+    <rect width="600" height="620" fill="#dcc6a1"/>
+    <rect y="470" width="600" height="150" fill="#c9ad7f"/>
+    <g stroke="#1d3557" stroke-width="3" stroke-linejoin="round">
+      <polygon points="300,120 380,220 300,420 220,220" fill="#fbf7ee"/>
+      <polygon points="300,120 380,220 300,230 220,220" fill="#ffffff"/>
+      <polygon points="160,330 215,395 160,500 105,395" fill="#f2ecdf"/>
+      <polygon points="440,300 505,380 440,510 375,380" fill="#f2ecdf"/>
+      <polygon points="470,190 500,225 470,270 440,225" fill="#fbf7ee"/>
+      <polygon points="105,200 130,232 105,275 80,232" fill="#fbf7ee"/>
+    </g>
+    <path d="M60 560 H540" stroke="#1d3557" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round"/></svg>
+<rect x="0" y="618" width="600" height="282" fill="#1d3557"/>
+<rect x="260" y="628" width="80" height="3" fill="#e9c46a"/>
+<text x="300" y="674" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" fill="#fbf7ee">Empires of</text><text x="300" y="734" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" fill="#fbf7ee">Salt</text>
+<text x="300" y="852" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" letter-spacing="5" fill="#e9c46a">CLARA DUBOIS</text>
+<rect x="0" y="0" width="26" height="900" fill="#000" opacity=".16"/>
+<rect x="26" y="0" width="3" height="900" fill="#fff" opacity=".12"/>
+</svg>

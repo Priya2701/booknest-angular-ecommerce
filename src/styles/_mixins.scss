@@ -1,0 +1,29 @@
+@use 'sass:map';
+
+// Mobile < 768px, tablet 768-1023px, desktop >= 1024px, wide desktop >= 1440px.
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1440px,
+);
+
+/// Mobile-first media query: styles apply from the given breakpoint upwards.
+@mixin up($name) {
+  @media (min-width: map.get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+/// Hover effects only where a real hover device exists (avoids sticky hover on touch screens).
+@mixin hover-device {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+@mixin focus-ring {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}

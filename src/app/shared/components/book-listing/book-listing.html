@@ -1,0 +1,22 @@
+<section>
+  @if (heading(); as text) {
+    <app-section-heading
+      [heading]="text"
+      [subheading]="subheading()"
+      [linkLabel]="linkLabel()"
+      [link]="link()"
+    />
+  }
+
+  @if (books().length > 0) {
+    <ul class="grid">
+      @for (book of books(); track book.id) {
+        <li>
+          <app-book-card [book]="book" (addToCart)="addToCart.emit($event)" />
+        </li>
+      }
+    </ul>
+  } @else {
+    <p class="empty">{{ emptyMessage() }}</p>
+  }
+</section>
