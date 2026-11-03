@@ -1,14 +1,16 @@
 @use '../../../../styles/mixins' as m;
 
-// 2 columns on mobile, 4 from tablet up. Four divides the 10-book catalogue and the
-// 4-book home sections evenly, so tablet never ends on a lone card.
+// One book per row on mobile (the card switches to a horizontal layout), 4 from tablet up.
+// Every card has the same width and height: columns are equal, and from tablet up rows share
+// the tallest card's height, so a short last row (e.g. 2 of 4 cards) keeps the same card size.
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-3);
 
   @include m.up(md) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
   }
 
   @include m.up(lg) {

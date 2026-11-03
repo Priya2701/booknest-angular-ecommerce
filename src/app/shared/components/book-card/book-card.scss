@@ -50,6 +50,27 @@
   }
 }
 
+// Mobile: one card per row, so lay the card out horizontally (cover left, details right)
+// instead of stretching a 2:3 cover to the full screen width. Kept after the base .card and
+// .cover rules so it overrides them.
+@media (max-width: 767.98px) {
+  .card {
+    flex-direction: row;
+  }
+
+  .cover {
+    flex: none;
+    align-self: stretch;
+    width: 7.5rem;
+    aspect-ratio: auto;
+
+    img {
+      position: absolute;
+      inset: 0;
+    }
+  }
+}
+
 .badge {
   position: absolute;
   top: var(--space-2);

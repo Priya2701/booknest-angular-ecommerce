@@ -1,43 +1,22 @@
 @use '../../../../styles/mixins' as m;
 
+// Every tile has the same width and height. A short last row (e.g. 2 of 3 tiles on tablet)
+// leaves empty cells instead of stretching its tiles.
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  // Mobile: one category per row.
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-3);
 
   @include m.up(md) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    // Rows share the tallest tile's height, so every tile is the same size.
+    grid-auto-rows: 1fr;
   }
 
   @include m.up(lg) {
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: var(--space-4);
-  }
-
-  // Avoid a lone tile in the last row of the 2-column mobile layout.
-  @media (max-width: 767.98px) {
-    li:last-child:nth-child(odd) {
-      grid-column: 1 / -1;
-    }
-  }
-
-  // Tablet (768-1023px): 3 tiles per row on a 6-column track. An incomplete last row
-  // is stretched to fill the width instead of leaving an empty cell.
-  @media (min-width: 768px) and (max-width: 1023.98px) {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-
-    li {
-      grid-column: span 2;
-    }
-
-    li:last-child:nth-child(3n + 1) {
-      grid-column: span 6;
-    }
-
-    li:nth-last-child(2):nth-child(3n + 1),
-    li:last-child:nth-child(3n + 2):not(:nth-child(3n + 1)) {
-      grid-column: span 3;
-    }
   }
 }
 
